@@ -1,20 +1,27 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamList } from './src/types';
+import { InputScreen } from './src/screens/InputScreen';
+import { AnswerScreen } from './src/screens/AnswerScreen';
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Input"
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Input" component={InputScreen} />
+        <Stack.Screen name="Answer" component={AnswerScreen} />
+      </Stack.Navigator>
+      <StatusBar style="dark" />
+      {/* 流式输出版本 */}
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
