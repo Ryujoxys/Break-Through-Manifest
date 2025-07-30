@@ -55,12 +55,6 @@ src/
    - 或者按 `i` 在iOS模拟器中打开
    - 或者按 `a` 在Android模拟器中打开
 
-## API配置
-
-应用使用Dify API服务：
-- **服务器**: http://dify.solocursor.com/v1
-- **API密钥**: app-kT8J6V0fhnpIqvXNTKrQgkd8
-
 ## 使用说明
 
 1. **输入问题**: 在主页面的文本框中输入你的困惑
