@@ -32,21 +32,27 @@
 
 1. **克隆项目**
    ```bash
-   git clone <repository-url>
-   cd bk/app
+   git clone https://github.com/your-username/kadianjiehuo.git
+   cd kadianjiehuo/app
    ```
 
-2. **安装依赖**
+2. **配置环境变量**
+   ```bash
+   cp .env.example .env
+   # 编辑 .env 文件，填入你的Dify API配置
+   ```
+
+3. **安装依赖**
    ```bash
    npm install
    ```
 
-3. **启动开发服务器**
+4. **启动开发服务器**
    ```bash
    npx expo start
    ```
 
-4. **在设备上运行**
+5. **在设备上运行**
    - 下载 Expo Go 应用
    - 扫描终端中的二维码
    - 或按 `w` 在浏览器中打开
@@ -79,7 +85,17 @@ app/
 └── package.json         # 项目配置
 ```
 
-## 🔧 API配置
+## 🔧 配置说明
+
+详细的配置说明请查看 [SETUP.md](app/SETUP.md)
+
+### 环境变量
+
+- `EXPO_PUBLIC_DIFY_API_URL`: Dify API服务器地址
+- `EXPO_PUBLIC_DIFY_API_KEY`: Dify应用的API密钥
+- `EXPO_PUBLIC_USE_MOCK_DATA`: 是否使用模拟数据
+
+### API配置
 
 应用使用Dify工作流API提供智能回答：
 
@@ -101,6 +117,11 @@ app/
 - 逐字显示答案
 - 温和的淡入动画
 - 优雅的错误处理
+
+### 安全性
+- 环境变量保护敏感信息
+- API密钥不会被提交到代码仓库
+- 优雅的错误处理和降级机制
 
 ### 技术亮点
 - TypeScript类型安全
