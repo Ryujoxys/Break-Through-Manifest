@@ -1,4 +1,4 @@
-# 卡点解惑 - 宇宙智慧问答应用
+# Break Through Manifest - 卡点解惑
 
 一个基于React Native + Expo的移动应用，通过AI工作流为用户提供人生困惑的智慧解答。
 
@@ -32,8 +32,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/your-username/kadianjiehuo.git
-   cd kadianjiehuo/app
+   git clone https://github.com/Ryujoxys/Break-Through-Manifest.git
+   cd Break-Through-Manifest/app
    ```
 
 2. **配置环境变量**
@@ -64,6 +64,16 @@
 3. **观看答案**: 答案会逐字显示，带有流畅的动画效果
 4. **继续提问**: 点击"返回提问"继续询问新问题
 
+## 🔧 配置说明
+
+详细的配置说明请查看 [SETUP.md](app/SETUP.md)
+
+### 环境变量
+
+- `EXPO_PUBLIC_DIFY_API_URL`: Dify API服务器地址
+- `EXPO_PUBLIC_DIFY_API_KEY`: Dify应用的API密钥
+- `EXPO_PUBLIC_USE_MOCK_DATA`: 是否使用模拟数据
+
 ## 🏗️ 项目结构
 
 ```
@@ -85,25 +95,6 @@ app/
 └── package.json         # 项目配置
 ```
 
-## 🔧 配置说明
-
-详细的配置说明请查看 [SETUP.md](app/SETUP.md)
-
-### 环境变量
-
-- `EXPO_PUBLIC_DIFY_API_URL`: Dify API服务器地址
-- `EXPO_PUBLIC_DIFY_API_KEY`: Dify应用的API密钥
-- `EXPO_PUBLIC_USE_MOCK_DATA`: 是否使用模拟数据
-
-### API配置
-
-应用使用Dify工作流API提供智能回答：
-
-- **端点**: `/workflows/run`
-- **模式**: 流式输出 (streaming)
-- **输入格式**: `{ user_question: string }`
-- **响应格式**: Server-Sent Events (SSE)
-
 ## 🌟 核心特性
 
 ### 流式输出
@@ -112,22 +103,16 @@ app/
 - 智能降级到模拟流式输出
 - 跨平台兼容（Web/iOS/Android）
 
-### 用户体验
-- 立即响应，无需等待
-- 逐字显示答案
-- 温和的淡入动画
-- 优雅的错误处理
-
 ### 安全性
 - 环境变量保护敏感信息
 - API密钥不会被提交到代码仓库
 - 优雅的错误处理和降级机制
 
-### 技术亮点
-- TypeScript类型安全
-- 模块化组件设计
-- 响应式布局
-- 优雅的状态管理
+### 用户体验
+- 立即响应，无需等待
+- 逐字显示答案
+- 温和的淡入动画
+- 优雅的错误处理
 
 ## 📄 许可证
 
